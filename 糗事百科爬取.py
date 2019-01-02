@@ -14,6 +14,7 @@ from web import Save
 if __name__ == '__main__':
     #url="https://acg12.com/278708/"
     #https://www.qiushibaike.com/8hr/page/1/
+    #https://www.qiushibaike.com/text/page/2/
     z=Zhengzhe.Zhengzhe()
     fileTime=time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
 
@@ -22,7 +23,7 @@ if __name__ == '__main__':
 
     f=open(fileTime+'糗事百科.txt','w',encoding='utf_8_sig')
     for page in range(1,10):
-        url="https://www.qiushibaike.com/8hr/page/"+str(page)+"/"
+        url="https://www.qiushibaike.com/text/page/"+str(page)+"/"
         gethtml=Url.Url(1)
         html=gethtml.getHtml_headers(url)
 
